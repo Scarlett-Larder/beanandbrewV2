@@ -1,0 +1,156 @@
+:root {
+    margin:0;
+    font-family: 'Aleo', serif;
+    background-color: #F4EBE8;
+  } 
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+h2 {
+    margin: 0%;
+    font-size: 4rem;
+}
+.flex {
+    display: flex;
+}
+.space {
+    margin-top: 15px;
+}
+.test {
+    background-color: rgb(83, 156, 116);
+    border-radius: 5px;
+}
+.size {
+    font-size: 20px;
+}
+
+.header {
+    display: flex;
+    background-color: rgb(83, 156, 116);
+    justify-content: space-between;
+}
+.header_sub {
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+    margin-right: 15px;
+    font-size: 20px;
+}
+.header_title {
+    margin-left: 15px;
+    font-weight: 500;
+}
+
+.bnav {
+    display: flex;
+    background-color: rgb(166, 175, 170);
+    justify-content: space-between;
+    margin-top: 25px;
+}
+.bnav_list {
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+
+
+.button {
+    padding: 15px;
+    background-color: rgb(226, 147, 43);
+    border-radius: 30px;
+    font-size: 20px;
+}
+.button:hover {
+    background-color: rgb(235, 158, 57);
+}
+
+.button_sus {
+    padding: 15px;
+    background-color: rgb(21, 151, 90);
+    border-radius: 30px;
+    font-size: 20px;
+    margin-left: 30px;
+}
+.button_sus:hover {
+    background-color: rgb(19, 167, 98);
+}
+
+
+.main_grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-top: 50px;
+}
+.maingrid_img {
+    border-radius: 25px;
+}
+.maingrid_sub {
+    margin: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.main_textBig {
+    font-size: 5.5rem;
+    margin: 0%;
+}
+.main_textMid {
+    font-size: 3rem;
+    margin: 0%;
+    font-weight: 400;
+}
+.main_textSma {
+    font-size: 1.5rem;
+    margin: 0%;
+    font-weight: 400;
+}
+.main_bg {
+    background-color: #e0d8d5; 
+}
+.main_textS2 {
+    padding-bottom: 15px;
+}
+.main_padding {
+    padding-left: 150px;
+}
+
+.para {
+    margin-right: 30px;
+    margin-left: 30px;
+}
+.aboutlr {
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+
+
+.prod_grid {    
+   display: grid;
+   grid-template-columns: auto auto auto auto;
+   margin-top: 50px;
+   margin-left: 50px;
+   margin-right: 50px;
+}
+.prod_section {
+    display: flex;
+}
+.prod_text {
+    margin: 5px;
+    font-size: 20px;
+}
+.prod_img {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.form_def {
+    margin: 30px;
+}
+
+.dash_order {
+    font-size: 25px;
+    margin-left: 15px;
+}
