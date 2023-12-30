@@ -47,6 +47,7 @@
     } else {
         echo "<p>Your cart is empty.</p>";
     }
+    
     ?>
     <br>
     <p class="main_textSma">Where and when would you like to pick up your order?</p>
