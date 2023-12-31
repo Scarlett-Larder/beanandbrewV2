@@ -2,10 +2,12 @@
     include('connection.php');
     session_start();
     if (isset($_POST['submit'])) {
+        $name2 = [];
         $loc = $_POST['location'];
         $time = $_POST['time'];
         foreach ($_SESSION['cart'] as $item) {
-            $name = $item['name'];
+            $wow = $item['name'];
+            $name2[] = $wow;
             $quantity = $item['qty'];
             $price = $item['price'];
         }
@@ -18,7 +20,7 @@
         else {
             echo "No users are logged in!";
         }
-        
+        $name = implode(" | ",$name2); 
         $sql = "INSERT INTO orders (Order_Contents, Total, Location, Order_date, id) VALUES (?, ?, ?, ?, ?)";
         $stmt = mysqli_prepare($conn, $sql);
     

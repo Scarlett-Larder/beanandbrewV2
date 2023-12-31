@@ -24,22 +24,46 @@
 <div>
 </div>
 <div class="prod_grid">
-        <?php 
-            $sql = "SELECT * FROM product";
-            $result = $conn->query($sql);
-            if ($result->num_rows > 0) {
-                while ($row = $result->fetch_assoc()) {
-                    echo "<div class='prod_section'>";
-                    echo "<div class='test'>";
-                    echo "<div class='prod_text'>".$row["name"]." - £".$row["price"]  ." | ". "<a href='orderscart.php?id={$row['product_id']}'>Add to Cart</a><br>"."</div>";
-                    echo '<img class="prod_img" src = "data:image/png;base64,' . base64_encode($row['img_url']) . '" width = "500px" height = "500px"/>';
-                    echo "</div>";
-                    echo "</div>";
-            }
-        }
-        ?>
+    </div>
+    <div class="">
+            <item class="" id="dataList"></item>
     </div>
 
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetchData();
+        });
+
+        async function fetchData() {
+            try {
+                const response = await fetch('product_script.php');
+                const data = await response.json();
+                
+                const dataList = document.getElementById('dataList');
+                const outputContainer = document.getElementById('outputContainer');
+
+                data.forEach(item => {
+                    const productItem = document.createElement('div');
+                    productItem.classList.add('product-item');
+                    const listItem = document.createElement('item');
+                    listItem.innerHTML = `<div class="prod_text"> ${item.name} £${item.price} | <a href='orderscart.php?id=${item.product_id}'>Add to Cart</a></div>`;
+                    // Create an img element and set its src to the Base64-encoded image data
+                    const imgElement = document.createElement('img');
+                    imgElement.src = `data:image/png;base64,${item.img_url}`;
+                    imgElement.alt = 'User Photo';
+                    imgElement.classList.add('prod_img2');
+                    productItem.appendChild(listItem);
+                    productItem.appendChild(imgElement)
+                    dataList.appendChild(productItem);
+                });
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        }
+    </script>
+        
 </body>
 
 </html>

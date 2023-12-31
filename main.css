@@ -22,6 +22,8 @@ h2 {
 .test {
     background-color: rgb(83, 156, 116);
     border-radius: 5px;
+    margin:auto;
+    margin-bottom: 30px;
 }
 .size {
     font-size: 20px;
@@ -125,14 +127,22 @@ h2 {
     margin-left: 30px;
 }
 
-
-
-.prod_grid {    
+#dataList {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-top: 15px;
+    gap:15px
+}
+.product-item {
+    background-color: rgb(83, 156, 116);
+    border-radius: 5px;
+    margin:auto;
+    margin-bottom: 30px;
+}
+.prod_grid {  
    display: grid;
-   grid-template-columns: auto auto auto auto;
-   margin-top: 50px;
-   margin-left: 50px;
-   margin-right: 50px;
+   grid-template-columns: auto auto auto;
+   margin-top: 15px;
 }
 .prod_section {
     display: flex;
@@ -145,7 +155,10 @@ h2 {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
-
+.prod_img2 {
+    width: 500px;
+    height: 500px;
+}
 .form_def {
     margin: 30px;
 }
