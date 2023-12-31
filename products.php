@@ -17,12 +17,7 @@
 </head>
 
 <body>
-    <div class="">
-            <item class="" id="dataList"></item>
-    </div>
-
-
-
+    <item id="dataList"></item>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             fetchData();
@@ -40,8 +35,7 @@
                     const productItem = document.createElement('div');
                     productItem.classList.add('product-item');
                     const listItem = document.createElement('item');
-                    listItem.innerHTML = `<div class="prod_text">${item.name} ${item.price}</div>`;
-                    // Create an img element and set its src to the Base64-encoded image data
+                    listItem.innerHTML = `<div class="prod_text">${item.name} | £${item.price}</div>`;
                     const imgElement = document.createElement('img');
                     imgElement.src = `data:image/png;base64,${item.img_url}`;
                     imgElement.alt = 'User Photo';

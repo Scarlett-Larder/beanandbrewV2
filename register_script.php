@@ -3,7 +3,7 @@ include('connection.php');
 
 if (isset($_POST['submit'])) {
     $username = $_POST['user'];
-    $password = password_hash($_POST['pass'], PASSWORD_DEFAULT); // Hash the password
+    $password = password_hash($_POST['pass'], PASSWORD_DEFAULT);
     $email = $_POST['email'];
     $bday = $_POST['bday'];
     $sql = "INSERT INTO user (name, password, email, birthday) VALUES (?, ?, ?, ?)";

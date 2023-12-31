@@ -6,7 +6,7 @@ if (isset($_POST['submit'])) {
     $password = $_POST['pass'];
     $cook = isset($_POST['cookie']) ? $_POST['cookie'] : '';
 
-    $sql = "SELECT id, password FROM user WHERE name = ?"; // Include the password in the SELECT statement
+    $sql = "SELECT id, password FROM user WHERE name = ?";
     $stmt = mysqli_prepare($conn, $sql);
 
     if ($stmt) {
@@ -15,7 +15,7 @@ if (isset($_POST['submit'])) {
             $result = mysqli_stmt_get_result($stmt);
 
             if ($row = mysqli_fetch_assoc($result)) {
-                $user_id = $row['id']; // Retrieve the user ID
+                $user_id = $row['id'];
                 $stored_hashed_password = trim($row['password']);
 
                 if (password_verify($password, $stored_hashed_password)) {

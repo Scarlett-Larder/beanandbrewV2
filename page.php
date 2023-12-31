@@ -57,7 +57,7 @@
             </div>
         </div>
         <div class="maingrid_sub sub_test">
-            <img class="maingrid_img" src="img\main_baking.jpg" width="600">
+            <img class="maingrid_img" src="img\main_about.jpg" width="600">
         </div>
     </div>
 </body>
