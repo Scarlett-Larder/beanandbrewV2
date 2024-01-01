@@ -167,3 +167,11 @@ h2 {
     font-size: 25px;
     margin-left: 15px;
 }
+
+.bake_textBig {
+    font-size: 4rem;
+}
+
+.bake_padding {
+    margin-left: 60px;
+}

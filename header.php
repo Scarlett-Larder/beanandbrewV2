@@ -5,11 +5,16 @@
 
         <div class="header_sub">
             <a href="/beanandbrewv2/products.php">Products</a>
-            <a href="pickup.php">Pick-up</a>
-            <a href="pickup.php">Baking</a>
+            <a href="orders.php">Pick-up</a>
+            <a href="baking.php">Baking</a>
             <?php 
+            session_start();
             if (isset($_COOKIE["user"])) {
                 $user = $_COOKIE["user"];
+                echo"<a href='dashboard.php'> Hello, ". $user ."! </a>";
+            }
+            else if (isset($_SESSION["user"])) {
+                $user = $_SESSION["user"];
                 echo"<a href='dashboard.php'> Hello, ". $user ."! </a>";
             }
             else {

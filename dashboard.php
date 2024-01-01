@@ -22,7 +22,6 @@
     <br>
     <br>
     <?php 
-        session_start();
         if (isset($_COOKIE["user"])) {
             $username = $_COOKIE["user"];
             echo "<h1 class='header_title'>Welcome back, ". $_COOKIE['user']. "</h1>";

@@ -20,11 +20,11 @@
     <h1 class="">Sign up Form</h1>
     <form name="form" action="register_script.php" onsubmit="return isvalid()" method="POST">
       <label>Username: </label>
-      <input type="text" id="user" name="user"></br></br>
+      <input type="text" id="user" name="user" required></br></br>
       <label>Password: </label>
-      <input type="password" id="pass" name="pass"></br></br>
+      <input type="password" id="pass" name="pass" required></br></br>
       <label>Email: </label>
-      <input type="text" id="email" name="email"></br></br>
+      <input type="text" id="email" name="email" required></br></br>
       <label>Date: </label>
       <input type="date" id=bday name="bday"></br></br>
       <input type="submit" id="btn" value="Login" name = "submit"/>
@@ -34,15 +34,24 @@
 <script>
   function isvalid() {
     var user = document.form.user.value;
-    var pass = document.form.pass.value
+    var pass = document.form.pass.value;
+    var numbers = /[0-9]/g;
     if(user.length=="" || pass.length=="" || email.length=="" ){
       alert("Username or password is empty!")
       return false
     }
-    else if(user.length <= 2 || pass.length <= 2 ){
+    else if(user.length <= 6 || pass.length <= 8){
       alert("Username or password is too short!")
       return false
     }
+    if(!user.match(numbers) || !pass.match(numbers)){
+      alert("No number in username or password!")
+      return false
+    }
+    else{
+      return false
+    }
+
   }
 </script>
 </body>
