@@ -27,7 +27,7 @@
       <input type="text" id="email" name="email" required></br></br>
       <label>Date: </label>
       <input type="date" id=bday name="bday"></br></br>
-      <input type="submit" id="btn" value="Login" name = "submit"/>
+      <input type="submit" id="btn" value="Login" name = "submit"/><br><br>
 
     </form>
   </div>
@@ -49,7 +49,7 @@
       return false
     }
     else{
-      return false
+      return true
     }
 
   }

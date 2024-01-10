@@ -1,6 +1,5 @@
 <?php
 include('connection.php');
-
 if (isset($_POST['submit'])) {
     $username = $_POST['user'];
     $password = password_hash($_POST['pass'], PASSWORD_DEFAULT);
@@ -10,7 +9,7 @@ if (isset($_POST['submit'])) {
     if ($stmt = mysqli_prepare($conn, $sql)) {
         mysqli_stmt_bind_param($stmt, "ssss", $username, $password, $email, $bday);
         if (mysqli_stmt_execute($stmt)) {
-            header("location: register.php");
+            header("location: login.php");
             exit();
         } else {
             echo '<script>

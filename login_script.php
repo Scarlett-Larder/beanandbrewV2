@@ -19,6 +19,7 @@ if (isset($_POST['submit'])) {
                 $stored_hashed_password = trim($row['password']);
 
                 if (password_verify($password, $stored_hashed_password)) {
+                    //If a cookie is found, then set cookie, if not, Session_start and set session info
                     if ($cook == 'cookie') {
                         setcookie("user", $username, time() + 3000, "/", "", true, true);
                         setcookie("pass", $password, time() + 3000, "/", "", true, true);

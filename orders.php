@@ -49,7 +49,6 @@
                     productItem.classList.add('product-item');
                     const listItem = document.createElement('item');
                     listItem.innerHTML = `<div class="prod_text"> ${item.name} £${item.price} | <a href='orderscart.php?id=${item.product_id}'>Add to Cart</a></div>`;
-                    // Create an img element and set its src to the Base64-encoded image data
                     const imgElement = document.createElement('img');
                     imgElement.src = `data:image/png;base64,${item.img_url}`;
                     imgElement.alt = 'User Photo';
